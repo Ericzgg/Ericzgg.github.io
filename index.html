@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>测试网站</title>
+  </head>
+  <body>
+    <script>
+      wx.config({
+        debug: false,
+        appId: 'wx7aaaef7ef3b0c1dc',
+        timestamp: Math.floor(Date.now() / 1000),
+        nonceStr: Math.random().toString(36).substr(2, 15),
+        signature: '',
+        jsApiList: [
+          'onMenuShareAppMessage',
+          'onMenuShareTimeline'
+        ]
+      });
+      wx.ready(function() {
+        wx.onMenuShareAppMessage({
+          title: '英文翻译中的战斗机',
+          desc: '这是一个pubmed.pro的分享网站',
+          link: window.location.href,
+          imgUrl: 'https://mp.weixin.qq.com/s?__biz=MzkyNjExMzg2MQ==&mid=2247484825&idx=1&sn=f4a0dd80ef8700c0772c18a9fe1f3061&chksm=c23d0cb3f54a85a5525ff873552ce5ca13fdd9d795f47594f933e4025a0b46255e0965115ead&token=795940203&lang=zh_CN#rd',
+          success: function () {},
+          cancel: function () {}
+        });
+        wx.onMenuShareTimeline({
+          title: '英文翻译中的战斗机',
+          link: window.location.href,
+          imgUrl: 'https://mp.weixin.qq.com/s?__biz=MzkyNjExMzg2MQ==&mid=2247484825&idx=1&sn=f4a0dd80ef8700c0772c18a9fe1f3061&chksm=c23d0cb3f54a85a5525ff873552ce5ca13fdd9d795f47594f933e4025a0b46255e0965115ead&token=795940203&lang=zh_CN#rd',
+          success: function () {},
+          cancel: function () {}
+        });
+      });
+    </script>
+    <p>这是一个测试网站。</p>
+  </body>
+</html>
